@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+}
+
+main {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  gap: 60px;
+}
+nav {
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  margin-right: 40px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navItem input {
+  width: 256px;
+  height: 35px;
+  border-radius: 15px;
+  border: 1px solid;
+  border-color: #3A35418A;
+}
+
+::-webkit-input-placeholder{
+	font-size: 14px;
+  padding-left: 40px;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
+  gap: 2px;
+}
+
+#profile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+
+}
+
+#kategori {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-kategori {
+  text-decoration: none;
+  background-color: #3A354114;
+  color: #222325;
+  padding: 5px 12px 5px 12px;
+  border-radius: 10px;
+}
+
+#konten {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cardImgContainer {
+  width: 225px;
+  height: 150px;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cardDesc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.penulis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.cardButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#populer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cardArtikel {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.judulArtikel {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* Maksimal 2 baris */
+  white-space: normal; /* Menampilkan teks dalam 2 baris, kemudian ditampilkan ellipsis untuk sisa teks */
+}
+
+.penulisArtikel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.nama {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
+
+.list-penulis {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#rekomendasi {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media screen and (max-width: 576px){
+  main {
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+  section, aside{
+    width: 100%;
+  }
+  nav {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .starLogo, .nav-btn, #username{
+    display: none;
+  }
+  #search {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    max-width: 380px;
+    min-width: 375px;
+
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .cardImgContainer {
+    width: 113px;
+    overflow: hidden;
+  }
+  .cardDesc {
+    max-width: 250px;
+  }
+  .card h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2; /* Maksimal 2 baris */
+    white-space: normal; /* Menampilkan teks dalam 2 baris, kemudian ditampilkan ellipsis untuk sisa teks */
+  }
+  #kategori {
+    white-space: nowrap;
+    overflow: scroll;
+  }
+  #kategori::-webkit-scrollbar {
+    display: none;
+  }
+
+}
