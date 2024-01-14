@@ -193,7 +193,7 @@ section {
   #logos {
     display: none;
   }
-  section {
+  #login {
     width: 100%;
     display: flex;
     flex-direction: column;
